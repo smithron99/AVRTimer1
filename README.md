@@ -11,7 +11,7 @@ to fired for up to three events:
 
 Prescale factors can configure the interval between timer ticks from the 
 native 16MHz clock speed, which ticks every 1/16 of a microsecond, down to
-15.625 KHz, which ticks every 1,204 microseconds.  These scaling factors are configured 
+15.625 KHz, which ticks every 1,024 microseconds.  These scaling factors are configured 
 by the Resolution enum value which is passed to the constructor.  Since the timer 
 always counts up to 65536, as the resolution becomes more coarse, the total time 
 spanned by those ticks increases, per the table below:
