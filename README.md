@@ -8,6 +8,7 @@ to fired for up to three events:
 - counter match to register A
 - counter match to register B
 - overflow (counter reaches 65536)
+
 Prescale factors can configure the interval between timer ticks from the 
 native 16MHz clock speed, which ticks every 1/16 of a microsecond, down to
 15.625 KHz, which ticks every 1,204 microseconds.  These scaling factors are configured 
