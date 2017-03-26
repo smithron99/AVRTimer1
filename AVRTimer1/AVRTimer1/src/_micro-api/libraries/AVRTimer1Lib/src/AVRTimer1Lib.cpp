@@ -117,7 +117,7 @@ void Timer::enableInterrupt(Register r)
 
 //---------------------------------------------------------------------
 // getTicks( microseconds )
-// convert microseconds to ticks, given the confiugred resoution
+// convert microseconds to ticks, given the configured resolution
 //---------------------------------------------------------------------
 unsigned short Timer::getTicks(long microseconds)
 {

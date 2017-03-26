@@ -85,7 +85,7 @@ public:
 	// precision gets finer, the maximum period shrinks accordingly.
 	// For example, resolution halfMicro has a maximum period of
 	// 32768 microseconds, while resolution sixtyFourMicros can
-	// count as high as 4,194,304 micros, in steps of 64
+	// count as high as 4,194,304 microseconds, in steps of 64
 	// Method begin() will return the maximum period in microseconds
 	// for the configured resolution
 	//---------------------------------------------------------------------
@@ -109,8 +109,8 @@ public:
 
 	//---------------------------------------------------------------------
 	// maxPeriod()
-	// returns the maximum count, in microseconds for
-	// the configured timer resolution
+	// returns the maximum count, in microseconds for the configured timer 
+	// resolution
 	//---------------------------------------------------------------------
 	unsigned long maxPeriod( void )
 	{
