@@ -23,3 +23,5 @@ spanned by those ticks increases, per the table below:
 |fourMicros			|    262,144 microseconds|
 |sixteenMicros	|	  1,048,576 microseconds|
 |sixtyFourMicros|		4,194,304 microseconds|
+
+NOTE: This class is specifically configured to work with a 16MHz clock, and does not attempt to adapt to other clock speeds
