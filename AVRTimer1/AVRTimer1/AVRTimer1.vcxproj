@@ -84,11 +84,11 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="AVRTimer1Lib.h" />
+    <ClInclude Include="src\AVRTimer1Lib.h" />
     <ClInclude Include="__vm\.AVRTimer1.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AVRTimer1Lib.cpp" />
+    <ClCompile Include="src\AVRTimer1Lib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="library.properties" />
