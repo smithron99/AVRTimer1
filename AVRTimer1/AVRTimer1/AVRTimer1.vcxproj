@@ -76,9 +76,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
-    <None Include="AVRTimer1.ino">
-      <FileType>CppCode</FileType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectCapability Include="VisualMicro" />
