@@ -4,7 +4,7 @@ A 16-bit timer for the ATMega AVR platform
 The timer class allows usage of the 16-bit ATMega Timer1 in "Normal mode".
 That is to say the counter counts up from 0 to 65536 then overflows back to 0
 The class allows for both compare registers A and B to be set, and for interrupts
-to fired for up to three events:
+to be fired for up to three events:
 - counter match to register A
 - counter match to register B
 - overflow (counter reaches 65536)

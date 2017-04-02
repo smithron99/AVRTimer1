@@ -36,7 +36,6 @@
 #define setbit(reg, b) (reg) |= (1 << (b))
 #define clearbit(reg, b) (reg) &= ~(1 << (b))
 
-#define DEBUG
 class Timer
 {
 public:
@@ -86,13 +85,11 @@ public:
 	// For example, resolution halfMicro has a maximum period of
 	// 32768 microseconds, while resolution sixtyFourMicros can
 	// count as high as 4,194,304 microseconds, in steps of 64
-	// Method begin() will return the maximum period in microseconds
-	// for the configured resolution
 	//---------------------------------------------------------------------
 	Timer(Resolution r):config(scaler[r]){}
 
 	//---------------------------------------------------------------------
-	// attachedInterrupt( register, isr, enable )
+	// attachInterrupt( register, isr, enable )
 	// Configures the provided interrupt service routine 
 	// to be called when the interrupt associated with 
 	// 'register' is fired. If 'enable' is true, the
