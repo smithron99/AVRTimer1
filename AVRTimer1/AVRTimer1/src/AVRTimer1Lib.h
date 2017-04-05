@@ -105,6 +105,24 @@ public:
 	void begin(void);
 
 	//---------------------------------------------------------------------
+	// disableInterrupt( register )
+	// Leaves ISR in place, but turns the interrupt off
+	//---------------------------------------------------------------------
+	void disableInterrupt(Register r);
+
+	//---------------------------------------------------------------------
+	// enableInterrupt( register )
+	// Turn the interrupt on. Interrupt will fire on any subsequent occurence
+	// of the interrupt event associated with the passed register, i.e. one of:
+	//		match to Compare Register A,  
+	//		match to Compare Register B, 
+	//		overflow.
+	// Presumes an ISR has been configured. If not, dummyISR() will be called
+	// when the interrupt is triggered
+	//---------------------------------------------------------------------
+	void enableInterrupt(Register r);
+
+	//---------------------------------------------------------------------
 	// maxPeriod()
 	// returns the maximum count, in microseconds for the configured timer 
 	// resolution
@@ -161,8 +179,6 @@ public:
 private:
 	static const Scale scaler[6];
 	const Scale& config;
-	void enableInterrupt(Register r);
-	void disableInterrupt(Register r);
 
 	//---------------------------------------------------------------------
 	// getTicks( microseconds)
