@@ -30,7 +30,7 @@ static const Timer::Scale Timer::scaler[6] =
 //---------------------------------------------------------------------
 // attachInterrupt( register, isr, enableFlag )
 //---------------------------------------------------------------------
-void Timer::attachInterrupt(Register type, isr i, boolean enable = false)
+void Timer::attachInterrupt(Register type, isr i, boolean enable)
 {
 	switch (type)
 	{
@@ -119,7 +119,7 @@ void Timer::enableInterrupt(Register r)
 // getTicks( microseconds )
 // convert microseconds to ticks, given the configured resolution
 //---------------------------------------------------------------------
-unsigned short Timer::getTicks(long microseconds)
+unsigned short Timer::getTicks(unsigned long microseconds)
 {
 	unsigned long result;
 
@@ -163,7 +163,7 @@ unsigned long Timer::micros()
 //---------------------------------------------------------------------
 // setPeriod( register, microseconds )
 //---------------------------------------------------------------------
-long Timer::setPeriod(Register reg, long microseconds)
+long Timer::setPeriod(Register reg, unsigned long microseconds)
 {
 	unsigned short t;
 

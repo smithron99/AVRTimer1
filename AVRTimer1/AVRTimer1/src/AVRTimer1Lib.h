@@ -95,7 +95,7 @@ public:
 	// 'register' is fired. If 'enable' is true, the
 	// interrupt is also activated
 	//---------------------------------------------------------------------
-	void attachInterrupt(Register type, isr routine, boolean enable);
+	void attachInterrupt(Register type, isr routine, boolean enable=true);
 
 	//---------------------------------------------------------------------
 	// begin()
@@ -114,8 +114,8 @@ public:
 	// enableInterrupt( register )
 	// Turn the interrupt on. Interrupt will fire on any subsequent occurence
 	// of the interrupt event associated with the passed register, i.e. one of:
-	//		match to Compare Register A,  
-	//		match to Compare Register B, 
+	//		counter match to Compare Register A,  
+	//		counter match to Compare Register B, 
 	//		overflow.
 	// Presumes an ISR has been configured. If not, dummyISR() will be called
 	// when the interrupt is triggered
@@ -147,7 +147,7 @@ public:
 	// If requested period exceeds maximum period for the given resolution, 
 	// returns maximum period and does not attempt to set the register
 	//--------------------------------------------------------------------- 
-	long setPeriod(Register reg, long microseconds);
+	long setPeriod(Register reg, unsigned long microseconds);
 	
 	//---------------------------------------------------------------------
 	// start()
@@ -190,7 +190,7 @@ private:
 	// passed is 130 microseconds, this will return 2 ticks, 
 	// spanning 2 * 64 = 128 microseconds.
 	//---------------------------------------------------------------------
-	unsigned short getTicks(long microseconds);
+	unsigned short getTicks(unsigned long microseconds);
 };
 
 #endif
